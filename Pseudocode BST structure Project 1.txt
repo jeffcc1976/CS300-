@@ -1,0 +1,394 @@
+// Name   : BST structure
+// Author: Jeffrey Carmichael
+
+inclde <iostream
+include<time.h>
+include <algortithm>
+include <utility>
+include <string>
+
+using namespace std;
+
+//delarations
+double strToDouble(string str, char ch);
+
+//Structure for the courses
+struct Node
+//Stores the int
+int courseNumber
+string courseTitle;
+// a pointer to the left child 
+  Node *left;
+// a pointer to the right child
+  Node *right;
+
+//create class for binary search
+class BinarySearchTree {
+
+//Reference to the root pointer
+private:
+  Node *root;
+
+//The pointer variable root
+public:
+  BinarySearchTree() {
+    root = nullptr;
+  }
+
+  void insert(int courseNumber, string courseTitle) {
+//allocate the Node    
+Node *new_node = new Node;
+//input the data
+    new_node->courseNumber = courseNumber;
+    new_node->courseTitle = courseTitle;
+// traversal of BST left to right
+    new_node->left = nullptr;
+    new_node->right = nullptr;
+
+//default constructor 
+    if (root == nullptr) {
+      root = new_node;
+    } else {
+      Node *current = root;
+      while (true) {
+    if (courseTitle < current->courseTitle) {
+    if (current->left == nullptr){
+        current->left = new_node;}
+        else {current = current->left;}
+        } 
+        else {
+          if (current->right == nullptr) {
+            current->right = new_node;
+            break;
+          } else {
+            current = current->right;
+
+ //seearching for the course number    
+  void search(int courseNumber) {
+//allocate the node
+    Node *current = root;
+    while (current != nullptr) {
+//if coursenumber matches return it 
+     if (courseNumber == current->courseNumber) {
+        cout << "Course found: " << current->courseTitle << endl;
+        return;
+      } else if (courseNumber < current->courseNumber) {
+        current = current->left;
+      } else {
+        current = current->right;
+      }
+    }
+//if coursenumber not found then indicate not availble
+    cout << "Course not available." << endl;
+  }
+
+  void print() {
+    print_subtree(root);
+  }
+
+private:
+  void print_subtree(Node *node) {
+    if (node == nullptr) {
+      return node;
+   }
+    print_subtree(node->left);
+//output of solution if available    
+cout << node->courseNumber << " | " << node->courseTitle << endl;
+    print_subtree(node->right);
+ 
+//Create a empty tree to store the courses
+tree = new Tree Course
+
+searching BST
+if (courseNumber⇢key == desiredKey) { 
+   return courseNumber; // The desired node was found
+}
+else if (desiredKey < courseNumber⇢key) {
+   // Visit left child, repeat
+}
+else if (desiredKey > currentNumber⇢key) {
+   // Visit right child, repeat
+}
+
+//Loop the lines and create course objects
+courseNumber, title, preReqs = line.split(",")
+course - course(courseNumber, courseTitle, preReqs)
+courses.append(course)
+        string preReqs
+ 
+//Loop lines create course objects
+courseNumber, courseTitle, preReqs = line.split(",")
+course - course(courseNumber, courseTitle, preReqs)
+courses.append(course)
+//Loading the data
+void loadData(vector<course> & courses)
+   ifstram inputFile("ABCUadvisinginput.txt);
+      
+int main
+//Main Title/menu
+cout<< "ABC University Computer Science Course Listing\n";
+
+//Menu for Data
+    int choice = 0;
+    while (choice != 9) {
+        cout << "  Menu:\n" << endl;
+        cout << "  1. Load Courses" << endl;
+        cout << "  2. Print Course Listing" << endl;
+        cout << "  3. Print Course" << endl;
+        cout << "  9. Exit" << endl;
+        cout << " Enter choice: ";
+        cin >> choice;
+//Create if statement is 9 is selected
+	if (choice == 9) {
+	break;
+        else if (choice == 1)
+//Load course
+	(courses)
+	cout << "Computer Science Courses loaded.\n";
+	else if (choice ==2)
+//Print course listing
+	printCourseInformation(courses);
+//Print course	
+	else if (choice == 3)
+	cout <<: Enter the Course Number:"
+	printCourseInfo( courses, courseNumberInput
+//Wrong Information entered
+	else
+cout <<choice << " Invalid course\n"
+return0 
+
+//Print the course information
+void printCourseInformation(Vector<Course> courses, String courseNumber) {
+	for all courses
+		if the course is the same as courseNumber
+			print out the course information
+			for each prerequisite of the course
+				print the prerequisite course information}
+
+//Search for a specific course
+Node* cur = head
+while (cur) 
+if (courseNumber == cur->course.courseNumber)
+Return Cur->course
+cur = cur->next
+return course()
+next!= nullprt
+return course 
+
+
+//Sorting low to high by courseNumber
+int partition(vector<course>& courses, int begin, int end)}
+//set the low and high = to begin and end
+int low = begin;
+int hi = end;
+
+string pivot = courses[low + (hi - low) / 2.title;
+while(low < hi) }
+while (courses[low].title.compare(pivot) < 0){
+++low;
+while (courses[hi].title.compare(pivot) > 0{
+if (low<hi) {
+std::swap(courses.at(low), courses.at(hi));
+++low
+--hi;
+// picking the middle element as pivot point
+// while not done 
+// keep incrementing low index while courses[low] < courses[pivot]
+// keep decrementing high index while courses[pivot] < courses[high]
+      /* If there are zero or one elements remaining,
+            all courses are partitioned. Return high */
+            // else swap the low and high courses (built in vector method)
+                 // move low and high closer ++low, --high
+         //return high;
+    return hi;
+//quickSort
+void quickSort(vector<course>& courses, int begin, int end) {
+    //set mid equal to 0
+    int p = 0;
+
+    if (begin >= end) {
+        return;
+    }
+
+    p = partition(courses, begin, end);
+
+    quickSort(courses, begin, p);
+    quickSort(courses, p + 1, end);
+
+    /* Base case: If there are 1 or zero courses to sort,
+     partition is already sorted otherwise if begin is greater
+     than or equal to end then return*/
+
+     /* Partition courses into low and high such that
+      midpoint is location of last element in low */
+
+      // recursively sort low partition (begin to mid)
+
+      // recursively sort high partition (mid+1 to end)
+
+}
+# ifndef     _CSVPARSER_HPP_
+# define    _CSVPARSER_HPP_
+
+# include <stdexcept>
+# include <string>
+# include <vector>
+# include <list>
+# include <sstream>
+
+namespace csv
+{
+    class Error : public std::runtime_error
+    {
+      public:
+        Error(const std::string &msg):
+          std::runtime_error(std::string("CSVparser : ").append(msg))
+        {
+        }
+    };
+    class Row
+    {
+    	public:
+    	    Row(const std::vector<std::string> &);
+    	    ~Row(void);
+    	public:
+            unsigned int size(void) const;
+            void push(const std::string &);
+            bool set(const std::string &, const std::string &); 
+    	private:
+    		const std::vector<std::string> _header;
+    		std::vector<std::string> _values;
+        public:
+            template<typename T>
+            const T getValue(unsigned int pos) const
+            {
+                if (pos < _values.size())
+                {
+                    T res;
+                    std::stringstream ss;
+                    ss << _values[pos];
+                    ss >> res;
+                    return res;
+                }
+                throw Error("can't return this value (doesn't exist)");
+            }
+            const std::string operator[](unsigned int) const;
+            const std::string operator[](const std::string &valueName) const;
+            friend std::ostream& operator<<(std::ostream& os, const Row &row);
+            friend std::ofstream& operator<<(std::ofstream& os, const Row &row);
+    };
+
+    enum DataType {
+        eFILE = 0,
+        ePURE = 1
+   };
+class Parser
+    {
+    public:
+        Parser(const std::string &, const DataType &type = eFILE, char sep = ',');
+        ~Parser(void);
+    public:
+        Row &getRow(unsigned int row) const;
+        unsigned int rowCount(void) const;
+        unsigned int columnCount(void) const;
+        std::vector<std::string> getHeader(void) const;
+        const std::string getHeaderElement(unsigned int pos) const;
+        const std::string &getFileName(void) const;
+    public:
+        bool deleteRow(unsigned int row);
+        bool addRow(unsigned int pos, const std::vector<std::string> &);
+        void sync(void) const;
+    protected:
+    	void parseHeader(void);
+    	void parseContent(void);
+    private:
+        std::string _file;
+        const DataType _type;
+        const char _sep;
+        std::vector<std::string> _originalFile;
+        std::vector<std::string> _header;
+        std::vector<Row *> _content;
+    public:
+        Row &operator[](unsigned int row) const;
+    };
+}
+#endif /*!_CSVPARSER_HPP_*/
+
+
+
+/**
+ * The one and only main() method
+ */
+int main(int argc, char* argv[]) {
+
+    // process command line arguments
+    string csvPath, courseKey;
+    switch (argc) {
+    case 2:
+        csvPath = argv[1];
+        bidKey = "MATH201";
+        break;
+    case 3:
+        csvPath = argv[1];
+        bidKey = argv[2];
+        break;
+    default:
+        csvPath = "ABCUadvisinginput.csv";
+        bidKey = "MAT203";
+    }
+
+    // Define a timer variable
+    clock_t ticks;
+
+    }
+
+	
+        case 1:
+            
+            // Initialize a timer variable before loading courses
+            ticks = clock();
+
+            // Complete the method call to load the courses
+            loadcourse(csvPath, bst);
+
+            //cout << bst->Size() << " courses read" << endl;
+
+            // Calculate elapsed time and display result
+            ticks = clock() - ticks; // current clock ticks minus starting clock ticks
+            cout << "time: " << ticks << " clock ticks" << endl;
+            cout << "time: " << ticks * 1.0 / CLOCKS_PER_SEC << " seconds" << endl;
+            break;
+
+        case 2:
+            bst->InOrder();
+            break;
+
+        case 3:
+            ticks = clock();
+
+            bid = bst->Search(courseKey);
+
+            ticks = clock() - ticks; // current clock ticks minus starting clock ticks
+
+            if (!course.courseNumber.empty()) {
+                displaycourse(course);
+            } else {
+            	cout << "Course Number " << courseKey << " not found." << endl;
+            }
+
+            cout << "time: " << ticks << " clock ticks" << endl;
+            cout << "time: " << ticks * 1.0 / CLOCKS_PER_SEC << " seconds" << endl;
+
+            break;
+
+        case 4:
+            bst->Remove(courseKey);
+            break;
+        }
+    }
+
+    cout << "Good bye." << endl;
+
+	return 0;
+}
+

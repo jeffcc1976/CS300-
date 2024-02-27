@@ -1,0 +1,125 @@
+CS300 Pseudocode ABC University
+
+//Global definitions 
+//forward declarations
+double strToDouble (string,str, char ch);
+//define the course and create the class 
+  class course: 
+    // courseNumber,courseTitle,preRequisites
+//Identifer
+string courseNumber;
+string courseTitle;
+string preRequisites;
+
+
+//Internal structure tree node
+struct Node
+//storres the integers 
+  int courseNumber;
+//stores the text
+  string courseTitle;
+// a pointer to the left child 
+  Node *left;
+// a pointer to the right child
+  Node *right;
+
+//create class for binary search
+class BinarySearchTree {
+
+//Reference to the root pointer
+private:
+  Node *root;
+
+//The pointer variable root
+public:
+  BinarySearchTree() {
+    root = nullptr;
+  }
+
+  void insert(int courseNumber, string courseTitle) {
+//allocate the Node    
+Node *new_node = new Node;
+//input the data
+    new_node->courseNumber = courseNumber;
+    new_node->courseTitle = courseTitle;
+// traversal of BST left to right
+    new_node->left = nullptr;
+    new_node->right = nullptr;
+
+//default constructor 
+    if (root == nullptr) {
+      root = new_node;
+    } else {
+      Node *current = root;
+      while (true) {
+    if (courseTitle < current->courseTitle) {
+    if (current->left == nullptr){
+        current->left = new_node;}
+        else {current = current->left;}
+        } 
+        else {
+          if (current->right == nullptr) {
+            current->right = new_node;
+            break;
+          } else {
+            current = current->right;
+ //seearching for the course number    
+  void search(int courseNumber) {
+//allocate the node
+    Node *current = root;
+    while (current != nullptr) {
+//if coursenumber matches return it 
+     if (courseNumber == current->courseNumber) {
+        cout << "Course found: " << current->courseTitle << endl;
+        return;
+      } else if (courseNumber < current->courseNumber) {
+        current = current->left;
+      } else {
+        current = current->right;
+      }
+    }
+//if coursenumber not found then indicate not availble
+    cout << "Course not available." << endl;
+  }
+
+  void print() {
+    print_subtree(root);
+  }
+
+private:
+  void print_subtree(Node *node) {
+    if (node == nullptr) {
+      return node;
+   }
+    print_subtree(node->left);
+//output of solution if available    
+cout << node->courseNumber << " | " << node->courseTitle << endl;
+    print_subtree(node->right);
+ 
+//Create a empty tree to store the courses
+tree = new Tree Course
+
+searching BST
+if (courseNumber⇢key == desiredKey) { 
+   return courseNumber; // The desired node was found
+}
+else if (desiredKey < courseNumber⇢key) {
+   // Visit left child, repeat
+}
+else if (desiredKey > currentNumber⇢key) {
+   // Visit right child, repeat
+}
+
+//Loop the lines and create course objects
+courseNumber, title, prerequisites = line.split(",")
+course - course(courseNumber, courseTitle, preRequisites)
+courses.append(course)
+
+
+//Print the course information
+void printCourseInformation(Vector<Course> courses, String courseNumber) {
+	for all courses
+		if the course is the same as courseNumber
+			print out the course information
+			for each prerequisite of the course
+				print the prerequisite course information}
